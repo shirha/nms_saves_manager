@@ -1,5 +1,12 @@
 # NMS Saves Manager
 
+**Historical Note**
+
+I have used robocopy to backup my NMS saves for years. Every time you use robocopy it backs up games that haven't change and the cache. My cache is now 438 MB, the savexx.hg files are 39 MB and I have 24 backups totaling 10.7 GB. I have deleted many that I wish I still had. The Pool I have created with NMS Saves Manager is 248 MB and 96 games with unique mtimes (modified date-time). NMS currently only allows 15 save game slots. There are more Expeditions than that plus Reduxs.
+
+
+
+
 **Quick Start Guide**
 
 Download zip, extract and rename directory to app then run app.exe  
