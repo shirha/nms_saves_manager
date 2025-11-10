@@ -1,5 +1,7 @@
 # NMS Saves Manager
 
+**Quick Start Guide**
+
 ![Quick Start Guide](./quick_start_guide.png)
 
 Navigate to http://localhost:5000
@@ -8,4 +10,4 @@ Navigate to http://localhost:5000
 
 Click Backup Saves
 
-![](./static/images/Screenshot-001.png)
+![](./static/images/Screenshot-002.png)
