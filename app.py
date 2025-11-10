@@ -84,14 +84,15 @@ MODE = config_data['MODE']
 GAME_SAVES_DIR = Path(config_data['GAME_SAVES_DIR'])
 POOL_DIR       = Path(f"NMS_{config_data['MODE'].capitalize()}_Pool")
 POOL_REGEX = re.compile(r'^(?P<slot>\d{2})_(?P<mtime>\d{8}\-\d{6})_(?P<runtime>\d{4,6})_(?P<savename>.+)$')
-SAFE_TITLE = re.compile(r'[^a-zA-Z0-9#]+')
+SAFE_TITLE = re.compile(r'[^a-zA-Z0-9#-]+')
 TIME_LEDGER = {}
 POOL_HEALTH_CHECK = True
+APP_VER = "v1.0"
 
 if not config_data['hg']: 
     logger.error("Either edit your config.json or delete it, then run again")
     sys.exit(1)
-logger.info(f"MODE: {config_data['MODE']}, GAME_SAVES_DIR: {GAME_SAVES_DIR}")
+logger.info(f"{APP_VER} MODE: {config_data['MODE']}, GAME_SAVES_DIR: {GAME_SAVES_DIR}")
 
 app = Flask(__name__)
 
@@ -288,7 +289,7 @@ def index():
     Returns:
         Response: Rendered 'index.html'.
     """
-    return render_template('index.html', mode=MODE)
+    return render_template('index.html', mode=MODE, ver=APP_VER)
 
 @app.route('/api/saves')
 def api_saves():

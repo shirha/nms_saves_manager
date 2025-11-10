@@ -587,7 +587,7 @@ $(document).ready(()=>{
 // initial load
   finishAndNotify([reloadPool(), reloadSaves()], '&nbsp;', 'alert-secondary');
 });
-
+/*
 // Keyboard shortcuts: 'r' for robo, 'b' for build
 $(document).on('keydown', (e) => {
   if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;  // Skip if typing in form fields
@@ -629,7 +629,7 @@ $(document).on('keydown', (e) => {
     });
   }
 });
-
+*/
 // At end of app.js
 window.showMessage = showMessage;
 window.finishAndNotify = finishAndNotify;
