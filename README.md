@@ -27,7 +27,7 @@ You are now in the Sandbox. You have to edit config.json and
 change "mode": "dev" to "mode": "prod" to manage **"live"** Saves  
 Hit Ctrl+C in console to exit app.exe  
 
-Game Saves must be in **C:\User\\<user_id>\HelloGames\NMS\st_\<stean_id>** for this app to work. 
+Game Saves must be in **C:\Users\\<user_id>\HelloGames\NMS\st_\<stean_id>** for this app to work. 
 
 **Final Comment:**
 
