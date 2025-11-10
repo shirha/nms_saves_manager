@@ -6,11 +6,11 @@ import sys
 from colorama import Fore, Style, init
 import random
 
-# ANSI escape code for ESC text                        90
+# ANSI escape code for ESC text                       
 YELLOW, GRAY, BLUE, GREEN, RED = "\x1b[93m", "\x1b[90m", "\x1b[36m", "\x1b[32m", "\x1b[91m"
 # ANSI escape code to reset text color to default
 RESET = "\x1b[0m"
-ESC = ["\x1b[90m","\x1b[36m","\x1b[36m\x1b[7m","\x1b[32m","\x1b[32m\x1b[7m","\x1b[45m","\x1b[7m"][0]#[random.randint(0, 5)]
+ESC = ["\x1b[90m","\x1b[36m","\x1b[36m\x1b[7m","\x1b[32m","\x1b[32m\x1b[7m","\x1b[45m","\x1b[7m"][random.randint(0, 6)]
 ESC = BLUE
 
 def load_config():
