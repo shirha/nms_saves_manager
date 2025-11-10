@@ -1,6 +1,7 @@
 # NMS Saves Manager
 
 **Quick Start Guide**
+Download zip, extract and rename to app then run app.exe
 
 ![Quick Start Guide](./quick_start_guide.png)
 
