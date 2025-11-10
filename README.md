@@ -15,3 +15,7 @@ Navigate to http://localhost:5000
 Click Backup Saves
 
 ![](./static/images/Screenshot-002.png)
+
+You are now in the Sandbox. You have to edit config.json and  
+change mode:'dev' to mode:'prod' to manage 'live' Saves  
+Hit Ctrl+C in console to exit app.exe  
