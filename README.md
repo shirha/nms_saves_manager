@@ -1,3 +1,3 @@
 # NMS Saves Manager
 
-![Quick Start Guide](./quick_start_guide.pmg)
+![Quick Start Guide](./quick_start_guide.png)
