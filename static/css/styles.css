@@ -1,0 +1,22 @@
+#mode {
+  display: inline-block; 
+  font-size: 18px; 
+  margin-left: 80px; 
+  color: #808080; 
+  transform: translateY(-5px);
+}
+
+.icon {
+  color: white;
+  background-color: #0d6efd;
+  border: 1px solid #0d6efd;
+  border-radius: 50%;
+  padding: 4px 16px;
+  display: inline-block;
+  font-size: 20px;
+  font-style: italic;
+  font-weight: bold;
+  transform: translateY(4px);
+  margin-left: 20px;
+  text-decoration: none;
+}
