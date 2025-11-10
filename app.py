@@ -649,17 +649,17 @@ for e in entries:
         path_count = os.listdir(POOL_DIR / e['path'])
 
         if not re.match(r'^[a-zA-Z0-9#-]+$', d['savename']):
-            print(f"{e['path']:40}: name failed safety check") 
+            print(f"{e['path']}: name failed safety check") 
             fatal_error = True
 
         if d['mtime'] in TIME_LEDGER:
             TIME_LEDGER[d['mtime']].append(int(d['slot']))
-            print(f"{e['path']:40}: dup mtime:{TIME_LEDGER[d['mtime']]} (not fatal)")
+            print(f"{e['path']}: dup mtime:{TIME_LEDGER[d['mtime']]} (not fatal)")
         else:
             TIME_LEDGER[d['mtime']] = [int(d['slot'])]
 
         if save_count != 4 or len(path_count) != save_count + note_count:
-            print(f"{e['path']:40}: wrong files in pool\n  {path_count} files:{len(path_count)} valid:{save_count} note:{note_count}")
+            print(f"{e['path']}: wrong files in pool\n  {path_count} files:{len(path_count)} valid:{save_count} note:{note_count}")
             # print(len(path_count), save_count, note_count)
             fatal_error = True
 
