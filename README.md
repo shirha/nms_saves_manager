@@ -9,7 +9,7 @@ I have used robocopy to backup my NMS game saves for years. Every time you use r
 
 **Quick Start Guide**
 
-Download zip, extract and rename directory to app then run app.exe  
+Download ZIP, extract and rename directory to 'app' then run app.exe  
 enter <user_id> and <steam_id>  
 Steam > Settings > Account > Account Details > Steam ID: (17 digits)  
 
