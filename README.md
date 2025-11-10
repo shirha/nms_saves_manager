@@ -12,10 +12,13 @@ Navigate to http://localhost:5000
 
 ![](./static/images/Screenshot-000.png)
 
-Click Backup Saves
+Click 'Backup Saves'
 
 ![](./static/images/Screenshot-002.png)
 
 You are now in the Sandbox. You have to edit config.json and  
-change "mode": "dev" to "mode": "dev" to manage **"live"** Saves  
+change "mode": "dev" to "mode": "prod" to manage **"live"** Saves  
 Hit Ctrl+C in console to exit app.exe  
+
+Game Saves must be in **C:\User\<user_id>\HelloGames\NMS\st_<stean_id>** for this app to work. 
+
