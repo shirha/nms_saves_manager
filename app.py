@@ -1,17 +1,7 @@
-# npx jest tests/test_frontend/ --clearCache
-# npx jest tests/test_frontend/
-# set PYTHONPATH=. && pytest tests/test_backend/ -v
-
-# grok's help with tests
-# https://x.com/i/grok/share/YblEz7g5PzVRXsdzHRJ8pPI4v
-# pyinstaller --onefile --add-data "templates;templates" app.py
-# pyinstaller --onefile --add-data "templates;templates" --add-data "static;static" app.py
 # IMPORTANT: 
 #   leftSelected.path for copy src, hist: see tr.click()
 #   rightSelected.slot for copy dst, used in savefile_names()
 #   rightSelected.path for backup
-
-# grok's read_saves cache - https://x.com/i/grok/share/ZR3ZiC1HC1yH0KyAYAcZCsTmk
 
 import concurrent.futures
 from flask import Flask, render_template, jsonify, request, send_file
