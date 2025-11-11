@@ -658,7 +658,8 @@ for e in entries:
         else:
             TIME_LEDGER[d['mtime']] = [int(d['slot'])]
 
-        if save_count != 4 or len(path_count) != save_count + note_count:
+        # if save_count != 4 or len(path_count) != save_count + note_count:
+        if save_count != 4 or len(path_count) != 4 + note_count:
             print(f"{e['path']}: wrong files in pool\n  {path_count} files:{len(path_count)} valid:{save_count} note:{note_count}")
             # print(len(path_count), save_count, note_count)
             fatal_error = True
