@@ -13,7 +13,7 @@ Download ZIP, extract and rename directory to 'app' then run app.exe
 enter <user_id> and <steam_id>  
 Steam > Settings > Account > Account Details > Steam ID: (17 digits)  
 
-![Quick Start Guide](./quick_start_guide.png)
+![Quick Start Guide](./static/quick_start_guide.png)
 
 Navigate to http://localhost:5000
 
