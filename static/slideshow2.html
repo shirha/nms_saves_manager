@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NMS Slideshow</title>
+<style>
+  body::-webkit-scrollbar {display: none;}
+  body {margin: 0;}
+
+  #container {
+    background-color:black;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .chevron {
+    font-weight: bold;
+    font-size: 20px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border: 1px solid black;
+    padding: 0;
+    margin: 4px;
+    border-radius: 50%;
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    background-color: greenyellow;
+    z-index: 1;
+  }
+
+  #right {
+    right: 0;
+  }
+
+  #left {
+    left: 0;
+  }
+
+  #image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  #fn {
+    font-size: 1.5em;
+    position: absolute;
+    color: greenyellow;
+    background-color: black;
+    padding: 8px;
+    border-radius: 8px;
+    z-index: 1;
+    margin: 0;
+    display: block;
+    bottom: 40px;
+    right: 40px;
+  }
+</style>
+</head>
+<body>
+<div id="container">
+  <div id="fn"></div> <!-- ⮜⮞ -->
+  <div id="left" class="chevron">⮜</div>
+  <div id="right" class="chevron">⮞</div>
+  <img id="image" src="" alt="Slideshow Image">
+</div>
+<script>
+let currentIndex = 0,
+  imagesData = {},
+  images = [],
+  descs = [];
+
+// Fetch the JSON file
+fetch('run.json')
+  .then(response => response.json())
+  .then(data => {
+    imagesData = data;
+    images = Object.keys(imagesData);
+    descs = Object.values(imagesData);
+
+    // console.log(imagesData);  // Logs the dynamic list
+    showImage(currentIndex);
+  })
+  .catch(error => {
+    console.error('Error loading slideshow data:', error);
+  });
+
+function showImage(index) {
+  const imgElement = document.getElementById('image');
+  const filename = document.getElementById('fn');
+
+  imgElement.src = images[index];
+  filename.textContent = `${currentIndex}. ${images[index]}`;
+}
+
+function nextImage() {
+  currentIndex = Math.min(images.length - 1, currentIndex + 1)
+  showImage(currentIndex);
+}
+
+function prevImage() {
+  currentIndex = Math.max(0, currentIndex - 1)
+  showImage(currentIndex);
+}
+
+document.getElementById('right').addEventListener('click', nextImage);
+document.getElementById('left').addEventListener('click', prevImage);
+document.addEventListener('keydown', function(event) {
+  if (event.key === 'ArrowRight') {
+    nextImage();
+  } else if (event.key === 'ArrowLeft') {
+    prevImage();
+  }
+});
+
+</script>
+</body>
+</html>
