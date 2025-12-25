@@ -1,6 +1,7 @@
 # NMS Saves Manager
 
-<span style="color:red;font-weight:bold;font-size:larger;">WARNING</span>
+<span style="color:red; font-weight:bold; font-size:larger;">WARNING</span>
+
 If you have Steam Cloud turn on then delete the saves games in the game or steam cloud brings them back automatically. 
 
 **Historical Note**
