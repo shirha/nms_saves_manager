@@ -1,6 +1,6 @@
 # NMS Saves Manager
 
-⚠️**WARNING** If you have Steam Cloud turned on then delete the saves in game or Steam Cloud brings them back automatically.
+⚠️**WARNING** If you have Steam Cloud turned on, then delete the saves in game or Steam Cloud brings them back automatically.
 
 **Historical Note**
 
